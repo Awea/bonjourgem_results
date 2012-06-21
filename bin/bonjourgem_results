@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift('lib')
+
+begin
+  require 'bonjourgem_results'
+rescue LoadError
+  require 'rubygems'
+  require 'bonjourgem_results'
+end
+
+include BonjourgemResults
+
+BonjourgemResults.run
